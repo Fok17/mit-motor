@@ -1,8 +1,7 @@
 # 参考实现清单（草稿 v0.1）
 
 > 用途：把每个子系统落到具体文件，标明「能翻译 / 只能参考 / 必须自己设计」，作为编码工作的输入清单。
-> 来源：GitHub 仓库调研（50 个，见 `~/research/repos.jsonl` 与批次文件）与 OpenAlex 文献扫描（进行中，论文侧结论另附）。
-> 结构约束见 [architecture.md](architecture.md)。
+> 来源：GitHub 仓库调研（50 个，见 `~/research/repos.jsonl` 与批次文件）；文献结论见 [research-findings.md](research-findings.md)，结构约束见 [architecture.md](architecture.md)。
 
 ## 1. 结论先说
 
@@ -85,6 +84,6 @@ pub enum Frame { Command(Cmd), Feedback(Feedback), Trace(TraceChunk) }
 
 ## 7. 待补
 
-- 论文侧：相对增益估计方法的精度、收敛与失效条件（OpenAlex 扫描进行中，按 P1–P5 分组）。
+- 论文侧已完成 41 篇归纳，见 [research-findings.md](research-findings.md)；P2（集成驱动片上采样）与部分 2025–2026 方法因 OpenAlex 配额停在 41/60，可换 Crossref/arXiv 补齐。
 - `g0_gimbal_motor`（唯一使用 MP6540 的仓库）尚未逐文件读，需补采样与 PWM 配置对照。
 - `trouverun/rust-stm32g4` 的平台层运行时待确认。
