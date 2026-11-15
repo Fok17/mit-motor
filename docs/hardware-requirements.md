@@ -24,7 +24,7 @@ V2 板不是为了换 MCU。换 MCU 是换料级改动；V2 板要做的是**补
 | 外设 | 3 ADC | 5 ADC / 7 COMP / 4 DAC / 6 OP-AMP / HRTIM / CORDIC / FMAC | §2.H 的调试设施因此可以白拿 |
 
 核对依据：CubeMX 器件库 `db/mcu/STM32G474R(B-C-E)Tx.xml`、`STM32G491R(C-E)Tx.xml` 两个器件文件
-按脚位比对，以及 PCB14 网表 `pcb/Netlist_PCB14_2026-11-11.tel`；`firmware/` 已切到 `stm32g474re` 并
+按脚位比对，以及 PCB14 网表 `pcb/Netlist_PCB14_2026-11-11.tel`（**在 `hw/pcb14` 分支上，本分支没有这个文件**）；`firmware/` 已切到 `stm32g474re` 并
 `cargo build` / `cargo build --release` 双双通过。
 
 **两条路径，建议都走**：
